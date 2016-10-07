@@ -30,7 +30,7 @@ As these eruptions form such widespread tephrochronogical markers, lots more geo
 
 I would really like to see these data.
 
-The data so far are stored in the spreadsheet [hekla3and4_distal_geochemistry.csv](hekla3and4_distal_geochemistry.csv).  It has columns for _longitude, latitude, site name, major oxide analyses (SiO2, TiO2 etc), total and reference_.  If you email a csv file in the same format to johnalexanderstevenson@gmail.com with your data, I will add it to the spreadsheet here and update the maps.  Of course, I will cite the referenced provided in my paper on the eruption phases.
+The current dataset is stored in the spreadsheet [hekla3and4_distal_geochemistry.csv](hekla3and4_distal_geochemistry.csv).  It has columns for _longitude, latitude, site name, major oxide analyses (SiO2, TiO2 etc), total and reference_.  If you email a csv file in the same format to johnalexanderstevenson@gmail.com with your data, I will add it to the spreadsheet here and update the maps.  Of course, I will cite the reference provided in my paper on the eruption phases.
 
 In particular, tephra glass analyses from Greenland, Faroes, Jan Mayen and the Baltic regions would be extremely valuable.
 
@@ -44,6 +44,6 @@ installed on your machine, you can recreate the plots as follows:
 ```
 git clone http://github.com/volcan01010/hekla3and4_distal_geochemistry.git
 cd hekla3and4_distal_geochemistry
-python plot_hekla3and4_geochemistry_map.py
+python plot_hekla3and4_distal_geochemistry.py
 ```
 

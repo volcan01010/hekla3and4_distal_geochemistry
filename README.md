@@ -1,10 +1,10 @@
 # Hekla 3 and 4 distal geochemistry
 
->The [hekla3and4_distal_geochemistry](http://github.com/volcan01010/hekla3and4_distal_geochemistry.git) repository contains data on the composition of glass shards from the Hekla 3 and Hekla 4 eruptions found outside Iceland.
+>The [hekla3and4_distal_geochemistry](http://github.com/volcan01010/hekla3and4_distal_geochemistry.git) repository contains data on the composition of glass shards from the Hekla 3 and Hekla 4 eruptions found outside Iceland.  Please contribute any that you may have.
 
 I have been reconstructing the Hekla 3 and Hekla 4 eruptions based on their deposits in Iceland.  They are complicated, with multiple phases with different compositions, plume heights and dispersal directions.  Now I would like to relate these phases to their cryptotephra deposits outside Iceland.  This can be done based on their geochemistry.
 
-Below are plots of the currently available geochemical data from [Tephrabase](http://www.tephrabase.org.uk).  For Hekla 4, they show interesting features such as the narrow distribution of dacite and andesite composition material.  I can relate these to the deposits in Iceland.  For Hekla 3, there is unfortunately a real lack of data.
+Below are plots of the geochemical data that I have assembled so far (mainly from [Tephrabase](http://www.tephrabase.org)).  For Hekla 4, they show interesting features such as the narrow distribution of dacite and andesite composition material.  I can relate these to the deposits in Iceland.  For Hekla 3, there is unfortunately a real lack of data.
 
 
 ## Maps of distribution of H3 and H4 by geochemistry

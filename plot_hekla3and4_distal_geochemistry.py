@@ -11,7 +11,7 @@ def main():
     Plot Hekla 3 and 4 geochemistry map
     """
     # Load data
-    df = pd.read_csv('hekla3and4_geochemistry_by_site.csv')
+    df = pd.read_csv('hekla3and4_distal_geochemistry.csv')
     df['classification'] = [classify_composition(x) for x in df['SiO2']]
 
     for tephra in ['Hekla 4 Tephra', 'Hekla 3 Tephra']:
@@ -40,7 +40,7 @@ def main():
             fig_title = '{} {}'.format(tephra, classification)
             plt.title(fig_title)
             plt.savefig('{}.png'.format(fig_title),
-                        bbox_inches='tight', dpi=150)
+                        bbox_inches='tight', dpi=100)
             plt.close()
 
 

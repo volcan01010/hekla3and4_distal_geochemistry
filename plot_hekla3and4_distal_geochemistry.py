@@ -12,15 +12,18 @@ def main():
     """
     # Load data
     df = pd.read_csv('hekla3and4_distal_geochemistry.csv')
+    df = df.append(pd.read_csv('hekla3and4_without_geochemistry.csv'),
+                   ignore_index=True)
     df['classification'] = [classify_composition(x) for x in df['SiO2']]
+    df.to_csv('/tmp/df.csv')
 
     for tephra in ['Hekla 4 Tephra', 'Hekla 3 Tephra']:
         for classification in ['Rhyolite', 'Dacite', 'Andesite']:
 
             # Get coordinates
-            (lon_found, lat_found,
-             lon_absent, lat_absent) = get_coordinates(df, tephra,
-                                                       classification)
+            coords = get_coordinates(df, tephra, classification)
+            (lon_found, lat_found, lon_absent, lat_absent,
+             lon_no_geochem, lat_no_geochem) = coords
 
             # Create figure
             print("Plotting {} {}".format(tephra, classification))
@@ -29,11 +32,14 @@ def main():
 
             # Plot sample locations
             m.scatter(lon_found, lat_found, latlon=True,
-                      color='red', s=60, zorder=3,
+                      color='red', s=60, zorder=4,
                       label='{}'.format(classification))
             m.scatter(lon_absent, lat_absent, latlon=True,
-                      color='orange', s=35, zorder=2,
+                      color='orange', s=35, zorder=3,
                       label='Other compositions'.format(classification))
+            m.scatter(lon_no_geochem, lat_no_geochem, latlon=True,
+                      color='0.2', s=15, zorder=2,
+                      label='No geochemistry data'.format(classification))
 
             # Add decoration
             plt.legend(loc='upper right', scatterpoints=1)
@@ -48,6 +54,9 @@ def classify_composition(sio2):
     """
     Simple classification based on wt% SiO2.
     """
+    if np.isnan(sio2):
+        return 'No geochemistry data'
+
     if sio2 > 69:
         return 'Rhyolite'
     elif sio2 > 63:
@@ -65,19 +74,31 @@ def get_coordinates(df, tephra, classification):
     Prepare lists of latitude and longitude of places where tephra
     is present or absent.
     """
+    my_tephra = df['tephra_name'] == tephra
+    my_classification = df['classification'] == classification
+    geochem_missing = df['classification'] == 'No geochemistry data'
+
     # Locations where composition is found
-    found = ((df['tephra_name'] == tephra) &
-             (df['classification'] == classification))
+    found = np.logical_and(my_tephra, my_classification)
     lon_found = df.loc[found, 'longitude'].tolist()
     lat_found = df.loc[found, 'latitude'].tolist()
 
-    # Get locations where composition is absent
-    absent = ((df['tephra_name'] == tephra) &
-              (df['classification'] != classification))
+    # Locations where other composition is found
+    absent = np.logical_and(
+        my_tephra, np.logical_not(
+            np.logical_or(my_classification, geochem_missing)))
     lon_absent = df.loc[absent, 'longitude'].tolist()
     lat_absent = df.loc[absent, 'latitude'].tolist()
 
-    return lon_found, lat_found, lon_absent, lat_absent
+    # Get locations with no geochemistry data
+    no_geochem = np.logical_and(my_tephra, geochem_missing)
+    lon_no_geochem = df.loc[no_geochem, 'longitude'].tolist()
+    lat_no_geochem = df.loc[no_geochem, 'latitude'].tolist()
+
+    coords = (lon_found, lat_found, lon_absent, lat_absent,
+              lon_no_geochem, lat_no_geochem)
+
+    return coords
 
 
 def prepare_basemap():

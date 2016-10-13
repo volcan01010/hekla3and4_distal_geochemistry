@@ -110,11 +110,11 @@ def prepare_basemap():
     # lat_2 is second standard parallel (defaults to lat_1).
     # lon_0,lat_0 is central point.
     # rsphere=(6378137.00,6356752.3142) specifies WGS84 ellipsoid
-    # area_thresh=1000 means don't plot coastline features less
+    # area_thresh=300 means don't plot coastline features less
     # than 300 km^2 in area.
     m = Basemap(width=2.8e6, height=3.2e6, rsphere=(6378137.00, 6356752.3142),
                 resolution='l', projection='lcc', area_thresh=300,
-                lat_1=45, lat_2=65, lat_0=61, lon_0=0)
+                lat_1=50, lat_2=66, lat_0=61.5, lon_0=0)
     m.drawcoastlines(linewidth=0.5, color='0.4')
     m.fillcontinents(color=[0.9, 0.9, 0.9], zorder=0)
     m.drawparallels(np.arange(-30, 81, 10.), labels=[1, 1, 0, 0])

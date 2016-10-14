@@ -18,7 +18,8 @@ def main():
     df.to_csv('/tmp/df.csv')
 
     for tephra in ['Hekla 4 Tephra', 'Hekla 3 Tephra']:
-        for classification in ['Rhyolite', 'Dacite', 'Andesite']:
+        for classification in ['Rhyolite', 'Dacite', 'Andesite',
+                               'Basaltic andesite']:
 
             # Get coordinates
             coords = get_coordinates(df, tephra, classification)

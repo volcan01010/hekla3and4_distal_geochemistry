@@ -14,37 +14,49 @@ def main():
     df = pd.read_csv('hekla3and4_distal_geochemistry.csv')
     df = df.append(pd.read_csv('hekla3and4_without_geochemistry.csv'),
                    ignore_index=True)
-    df['classification'] = [classify_composition(x) for x in df['SiO2']]
-    df.to_csv('/tmp/df.csv')
+
+    # Add unique IDs for sites with no geochemistry
+    df.loc[df['site'].isnull(), 'site'] = df.loc[
+        df['site'].isnull()].index.tolist()
+
+    # Classify composition
+    df['composition'] = [classify_composition(x) for x in df['SiO2']]
+
+    # Write summary csv file
+    grouped = df.groupby(
+        ['tephra_name', 'site', 'composition'])['longitude', 'latitude']
+    grouped.mean().to_csv(
+        'summary_sites_and_compositions.csv', header=True, index=True,
+        float_format='%.2f')
 
     for tephra in ['Hekla 4 Tephra', 'Hekla 3 Tephra']:
-        for classification in ['Rhyolite', 'Dacite', 'Andesite',
-                               'Basaltic andesite']:
+        for composition in ['Rhyolite', 'Dacite', 'Andesite',
+                            'Basaltic andesite']:
 
             # Get coordinates
-            coords = get_coordinates(df, tephra, classification)
+            coords = get_coordinates(df, tephra, composition)
             (lon_found, lat_found, lon_absent, lat_absent,
              lon_no_geochem, lat_no_geochem) = coords
 
             # Create figure
-            print("Plotting {} {}".format(tephra, classification))
+            print("Plotting {} {}".format(tephra, composition))
             plt.figure(figsize=(7, 7))
             m = prepare_basemap()
 
             # Plot sample locations
             m.scatter(lon_found, lat_found, latlon=True,
                       color='red', s=60, zorder=4,
-                      label='{}'.format(classification))
+                      label='{}'.format(composition))
             m.scatter(lon_absent, lat_absent, latlon=True,
                       color='orange', s=35, zorder=3,
-                      label='Other compositions'.format(classification))
+                      label='Other compositions'.format(composition))
             m.scatter(lon_no_geochem, lat_no_geochem, latlon=True,
                       color='0.2', s=15, zorder=2,
-                      label='No geochemistry data'.format(classification))
+                      label='No geochemistry data'.format(composition))
 
             # Add decoration
             plt.legend(loc='upper right', scatterpoints=1)
-            fig_title = '{} {}'.format(tephra, classification)
+            fig_title = '{} {}'.format(tephra, composition)
             plt.title(fig_title)
             plt.savefig('{}.png'.format(fig_title),
                         bbox_inches='tight', dpi=100)
@@ -53,7 +65,7 @@ def main():
 
 def classify_composition(sio2):
     """
-    Simple classification based on wt% SiO2.
+    Simple composition based on wt% SiO2.
     """
     if np.isnan(sio2):
         return 'No geochemistry data'
@@ -70,24 +82,24 @@ def classify_composition(sio2):
         return 'Basalt'
 
 
-def get_coordinates(df, tephra, classification):
+def get_coordinates(df, tephra, composition):
     """
     Prepare lists of latitude and longitude of places where tephra
     is present or absent.
     """
     my_tephra = df['tephra_name'] == tephra
-    my_classification = df['classification'] == classification
-    geochem_missing = df['classification'] == 'No geochemistry data'
+    my_composition = df['composition'] == composition
+    geochem_missing = df['composition'] == 'No geochemistry data'
 
     # Locations where composition is found
-    found = np.logical_and(my_tephra, my_classification)
+    found = np.logical_and(my_tephra, my_composition)
     lon_found = df.loc[found, 'longitude'].tolist()
     lat_found = df.loc[found, 'latitude'].tolist()
 
     # Locations where other composition is found
     absent = np.logical_and(
         my_tephra, np.logical_not(
-            np.logical_or(my_classification, geochem_missing)))
+            np.logical_or(my_composition, geochem_missing)))
     lon_absent = df.loc[absent, 'longitude'].tolist()
     lat_absent = df.loc[absent, 'latitude'].tolist()
 
@@ -120,7 +132,7 @@ def prepare_basemap():
     m.fillcontinents(color=[0.9, 0.9, 0.9], zorder=0)
     m.drawparallels(np.arange(-30, 81, 10.), labels=[1, 1, 0, 0])
     m.drawmeridians(np.arange(-50, 51, 10.), labels=[0, 0, 0, 1])
-    
+
     return m
 
 

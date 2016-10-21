@@ -26,7 +26,7 @@ def main():
     grouped = df.groupby(
         ['tephra_name', 'site', 'composition'])['longitude', 'latitude']
     grouped.mean().to_csv(
-        'summary_sites_and_compositions.csv', header=True, index=True,
+        'hekla3and4_distal_geochemistry_summary.csv', header=True, index=True,
         float_format='%.2f')
 
     for tephra in ['Hekla 4 Tephra', 'Hekla 3 Tephra']:

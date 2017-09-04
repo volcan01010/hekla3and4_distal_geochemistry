@@ -11,17 +11,17 @@ Below are plots of the geochemical data that I have assembled so far (mainly fro
 
 The following maps show the results so far.
 
-![Hekla 4 Rhyolite](Hekla 4 Tephra Rhyolite.png?raw=true)
+![Hekla 4 Rhyolite](hekla_4_tephra_rhyolite.png?raw=true)
 
-![Hekla 4 Dacite](Hekla 4 Tephra Dacite.png?raw=true)
+![Hekla 4 Dacite](hekla_4_tephra_dacite.png?raw=true)
 
-![Hekla 4 Andesite](Hekla 4 Tephra Andesite.png?raw=true)
+![Hekla 4 Andesite](hekla_4_tephra_andesite.png?raw=true)
 
-![Hekla 3 Rhyolite](Hekla 3 Tephra Rhyolite.png?raw=true)
+![Hekla 3 Rhyolite](hekla_3_tephra_rhyolite.png?raw=true)
 
-![Hekla 3 Dacite](Hekla 3 Tephra Dacite.png?raw=true)
+![Hekla 3 Dacite](hekla_3_tephra_dacite.png?raw=true)
 
-![Hekla 3 Andesite](Hekla 3 Tephra Andesite.png?raw=true)
+![Hekla 3 Andesite](hekla_3_tephra_andesite.png?raw=true)
 
 
 ## A request for data

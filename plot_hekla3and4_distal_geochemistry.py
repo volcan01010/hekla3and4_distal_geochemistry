@@ -56,7 +56,10 @@ def main():
 
             # Add decoration
             plt.legend(loc='upper right', scatterpoints=1)
+
+            # Save with camel_case name
             fig_title = '{} {}'.format(tephra, composition)
+            fig_title = fig_title.lower().replace(' ', '_')
             plt.title(fig_title)
             plt.savefig('{}.png'.format(fig_title),
                         bbox_inches='tight', dpi=100)

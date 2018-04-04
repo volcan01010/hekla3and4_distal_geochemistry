@@ -1,22 +1,25 @@
 tephra_name,site,composition,longitude,latitude
-Hekla 3 Tephra,1185,No geochemistry data,12.17,59.53
-Hekla 3 Tephra,1186,No geochemistry data,12.08,59.38
-Hekla 3 Tephra,1187,No geochemistry data,12.48,63.31
-Hekla 3 Tephra,1188,No geochemistry data,12.26,59.85
-Hekla 3 Tephra,1189,No geochemistry data,12.13,59.62
-Hekla 3 Tephra,1190,No geochemistry data,12.67,59.63
-Hekla 3 Tephra,1191,No geochemistry data,13.26,60.39
-Hekla 3 Tephra,1192,No geochemistry data,12.66,60.21
-Hekla 3 Tephra,1193,No geochemistry data,10.03,54.13
-Hekla 3 Tephra,1194,No geochemistry data,10.03,54.13
-Hekla 3 Tephra,1195,No geochemistry data,9.24,54.82
-Hekla 3 Tephra,1196,No geochemistry data,-7.46,54.63
-Hekla 3 Tephra,1197,No geochemistry data,-6.85,62.07
+Hekla 3 Tephra,1268,No geochemistry data,12.17,59.53
+Hekla 3 Tephra,1269,No geochemistry data,12.08,59.38
+Hekla 3 Tephra,1270,No geochemistry data,12.48,63.31
+Hekla 3 Tephra,1271,No geochemistry data,12.26,59.85
+Hekla 3 Tephra,1272,No geochemistry data,12.13,59.62
+Hekla 3 Tephra,1273,No geochemistry data,12.67,59.63
+Hekla 3 Tephra,1274,No geochemistry data,13.26,60.39
+Hekla 3 Tephra,1275,No geochemistry data,12.66,60.21
+Hekla 3 Tephra,1276,No geochemistry data,10.03,54.13
+Hekla 3 Tephra,1277,No geochemistry data,10.03,54.13
+Hekla 3 Tephra,1278,No geochemistry data,9.24,54.82
+Hekla 3 Tephra,1279,No geochemistry data,-7.46,54.63
+Hekla 3 Tephra,1280,No geochemistry data,-6.85,62.07
 Hekla 3 Tephra,Audkula,Andesite,-20.04,65.50
 Hekla 3 Tephra,Audkula,Dacite,-20.04,65.50
 Hekla 3 Tephra,Audkula,Rhyolite,-20.04,65.50
 Hekla 3 Tephra,Brúnavatn,Dacite,-6.86,62.07
 Hekla 3 Tephra,Brúnavatn,Rhyolite,-6.86,62.07
+Hekla 3 Tephra,Bæjarvötn,Andesite,-21.44,65.72
+Hekla 3 Tephra,Bæjarvötn,Basaltic andesite,-21.44,65.72
+Hekla 3 Tephra,Bæjarvötn,Dacite,-21.44,65.72
 Hekla 3 Tephra,Fågelmossen,Andesite,12.17,59.53
 Hekla 3 Tephra,Fågelmossen,Dacite,12.17,59.53
 Hekla 3 Tephra,Fågelmossen,Rhyolite,12.17,59.53
@@ -57,54 +60,57 @@ Hekla 3 Tephra,Solheimahals,Dacite,-20.06,65.53
 Hekla 3 Tephra,Solheimahals,Rhyolite,-20.06,65.53
 Hekla 3 Tephra,Tungunesmuli,Dacite,-19.96,65.51
 Hekla 3 Tephra,Tungunesmuli,Rhyolite,-19.96,65.51
-Hekla 4 Tephra,1198,No geochemistry data,14.90,58.20
-Hekla 4 Tephra,1199,No geochemistry data,13.94,68.32
-Hekla 4 Tephra,1200,No geochemistry data,13.74,68.25
-Hekla 4 Tephra,1201,No geochemistry data,12.08,59.38
-Hekla 4 Tephra,1202,No geochemistry data,12.48,63.31
-Hekla 4 Tephra,1203,No geochemistry data,12.26,59.85
-Hekla 4 Tephra,1204,No geochemistry data,12.67,59.63
-Hekla 4 Tephra,1205,No geochemistry data,24.11,59.08
-Hekla 4 Tephra,1206,No geochemistry data,15.94,69.11
-Hekla 4 Tephra,1207,No geochemistry data,13.26,60.39
-Hekla 4 Tephra,1208,No geochemistry data,12.66,60.21
-Hekla 4 Tephra,1209,No geochemistry data,10.03,54.13
-Hekla 4 Tephra,1210,No geochemistry data,10.03,54.13
-Hekla 4 Tephra,1211,No geochemistry data,9.24,54.82
-Hekla 4 Tephra,1212,No geochemistry data,-4.40,57.98
-Hekla 4 Tephra,1213,No geochemistry data,-6.32,57.60
-Hekla 4 Tephra,1214,No geochemistry data,-2.19,57.61
-Hekla 4 Tephra,1215,No geochemistry data,-2.91,53.90
-Hekla 4 Tephra,1216,No geochemistry data,-2.21,54.25
-Hekla 4 Tephra,1217,No geochemistry data,-3.27,58.81
-Hekla 4 Tephra,1218,No geochemistry data,-1.16,60.18
-Hekla 4 Tephra,1219,No geochemistry data,-4.39,57.98
-Hekla 4 Tephra,1220,No geochemistry data,-4.08,58.02
-Hekla 4 Tephra,1221,No geochemistry data,-3.78,58.36
-Hekla 4 Tephra,1222,No geochemistry data,-3.08,55.01
-Hekla 4 Tephra,1223,No geochemistry data,-4.17,57.23
-Hekla 4 Tephra,1224,No geochemistry data,-2.13,57.59
-Hekla 4 Tephra,1225,No geochemistry data,-3.83,58.38
-Hekla 4 Tephra,1226,No geochemistry data,-3.70,58.38
-Hekla 4 Tephra,1227,No geochemistry data,-6.63,54.78
-Hekla 4 Tephra,1228,No geochemistry data,-7.46,54.63
-Hekla 4 Tephra,1229,No geochemistry data,-6.55,54.89
-Hekla 4 Tephra,1230,No geochemistry data,-6.36,54.32
-Hekla 4 Tephra,1231,No geochemistry data,-6.57,55.08
-Hekla 4 Tephra,1232,No geochemistry data,-8.03,54.42
-Hekla 4 Tephra,1233,No geochemistry data,-7.25,55.28
-Hekla 4 Tephra,1234,No geochemistry data,-6.23,55.07
-Hekla 4 Tephra,1235,No geochemistry data,-6.28,54.77
-Hekla 4 Tephra,1236,No geochemistry data,-7.87,53.60
-Hekla 4 Tephra,1237,No geochemistry data,-6.85,62.07
-Hekla 4 Tephra,1238,No geochemistry data,-7.08,62.30
-Hekla 4 Tephra,1239,No geochemistry data,-7.00,62.13
-Hekla 4 Tephra,1240,No geochemistry data,6.83,62.02
-Hekla 4 Tephra,1241,No geochemistry data,-6.73,62.10
+Hekla 4 Tephra,1281,No geochemistry data,14.90,58.20
+Hekla 4 Tephra,1282,No geochemistry data,13.94,68.32
+Hekla 4 Tephra,1283,No geochemistry data,13.74,68.25
+Hekla 4 Tephra,1284,No geochemistry data,12.08,59.38
+Hekla 4 Tephra,1285,No geochemistry data,12.48,63.31
+Hekla 4 Tephra,1286,No geochemistry data,12.26,59.85
+Hekla 4 Tephra,1287,No geochemistry data,12.67,59.63
+Hekla 4 Tephra,1288,No geochemistry data,24.11,59.08
+Hekla 4 Tephra,1289,No geochemistry data,15.94,69.11
+Hekla 4 Tephra,1290,No geochemistry data,13.26,60.39
+Hekla 4 Tephra,1291,No geochemistry data,12.66,60.21
+Hekla 4 Tephra,1292,No geochemistry data,10.03,54.13
+Hekla 4 Tephra,1293,No geochemistry data,10.03,54.13
+Hekla 4 Tephra,1294,No geochemistry data,9.24,54.82
+Hekla 4 Tephra,1295,No geochemistry data,-4.40,57.98
+Hekla 4 Tephra,1296,No geochemistry data,-6.32,57.60
+Hekla 4 Tephra,1297,No geochemistry data,-2.19,57.61
+Hekla 4 Tephra,1298,No geochemistry data,-2.91,53.90
+Hekla 4 Tephra,1299,No geochemistry data,-2.21,54.25
+Hekla 4 Tephra,1300,No geochemistry data,-3.27,58.81
+Hekla 4 Tephra,1301,No geochemistry data,-1.16,60.18
+Hekla 4 Tephra,1302,No geochemistry data,-4.39,57.98
+Hekla 4 Tephra,1303,No geochemistry data,-4.08,58.02
+Hekla 4 Tephra,1304,No geochemistry data,-3.78,58.36
+Hekla 4 Tephra,1305,No geochemistry data,-3.08,55.01
+Hekla 4 Tephra,1306,No geochemistry data,-4.17,57.23
+Hekla 4 Tephra,1307,No geochemistry data,-2.13,57.59
+Hekla 4 Tephra,1308,No geochemistry data,-3.83,58.38
+Hekla 4 Tephra,1309,No geochemistry data,-3.70,58.38
+Hekla 4 Tephra,1310,No geochemistry data,-6.63,54.78
+Hekla 4 Tephra,1311,No geochemistry data,-7.46,54.63
+Hekla 4 Tephra,1312,No geochemistry data,-6.55,54.89
+Hekla 4 Tephra,1313,No geochemistry data,-6.36,54.32
+Hekla 4 Tephra,1314,No geochemistry data,-6.57,55.08
+Hekla 4 Tephra,1315,No geochemistry data,-8.03,54.42
+Hekla 4 Tephra,1316,No geochemistry data,-7.25,55.28
+Hekla 4 Tephra,1317,No geochemistry data,-6.23,55.07
+Hekla 4 Tephra,1318,No geochemistry data,-6.28,54.77
+Hekla 4 Tephra,1319,No geochemistry data,-7.87,53.60
+Hekla 4 Tephra,1320,No geochemistry data,-6.85,62.07
+Hekla 4 Tephra,1321,No geochemistry data,-7.08,62.30
+Hekla 4 Tephra,1322,No geochemistry data,-7.00,62.13
+Hekla 4 Tephra,1323,No geochemistry data,6.83,62.02
+Hekla 4 Tephra,1324,No geochemistry data,-6.73,62.10
 Hekla 4 Tephra,Audkula,Rhyolite,-20.04,65.50
 Hekla 4 Tephra,Borge,Rhyolite,13.74,68.25
 Hekla 4 Tephra,Brúnavatn,Andesite,-6.86,62.07
 Hekla 4 Tephra,Brúnavatn,Dacite,-6.86,62.07
+Hekla 4 Tephra,Bæjarvötn,Andesite,-21.44,65.72
+Hekla 4 Tephra,Bæjarvötn,Basalt,-21.44,65.72
+Hekla 4 Tephra,Bæjarvötn,Basaltic andesite,-21.44,65.72
 Hekla 4 Tephra,Claraghmore,Basalt,-7.45,54.63
 Hekla 4 Tephra,Claraghmore,Dacite,-7.45,54.63
 Hekla 4 Tephra,Claraghmore,Rhyolite,-7.45,54.63
